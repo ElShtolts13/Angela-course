@@ -58,12 +58,12 @@
 		CEAFC9372AF56FF000C879D0 /* Egg Timer */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFC94D2AF630AA00C879D0 /* alarm_sound.mp3 */,
 				CEAFC9382AF56FF000C879D0 /* AppDelegate.swift */,
 				CEAFC93A2AF56FF000C879D0 /* SceneDelegate.swift */,
 				CEAFC93C2AF56FF000C879D0 /* ViewController.swift */,
 				CEAFC93E2AF56FF000C879D0 /* Main.storyboard */,
 				CEAFC9412AF56FF200C879D0 /* Assets.xcassets */,
-				CEAFC94D2AF630AA00C879D0 /* alarm_sound.mp3 */,
 				CEAFC9432AF56FF200C879D0 /* LaunchScreen.storyboard */,
 				CEAFC9462AF56FF200C879D0 /* Info.plist */,
 			);
