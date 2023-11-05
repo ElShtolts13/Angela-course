@@ -3,7 +3,7 @@
 2. Each app is located on a separate branch and duplicated in the main branch.
 3. Branches start from lesson 2 as the first lesson did't' contain a practical assignment.
 4. UIKit/Storyboard
-5. At the moment, the repository includes 7 applications:
+5. At the moment, the repository includes 8 applications:
  - Lesson 2. "I am rich" 
  - Lesson 3. "I am poor" 
  - Lesson 4. "Dicee" 
