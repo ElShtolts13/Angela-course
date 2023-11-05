@@ -1,4 +1,4 @@
-# Lesson 2. "I am rich"
+# Lesson 2. "I am Rich"
 1. This is my first step towards becoming a iOS developer.
 2. The app does nothing.
 3. The application was created to showcase wealth.
