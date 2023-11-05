@@ -70,6 +70,7 @@
 		AD937BF422C61DBB002E2D88 /* Xylophone */ = {
 			isa = PBXGroup;
 			children = (
+				CEA1E2D32AF6B07100334ECA /* New Group */,
 				AD937BF522C61DBB002E2D88 /* AppDelegate.swift */,
 				AD937BF722C61DBB002E2D88 /* SceneDelegate.swift */,
 				AD937BF922C61DBB002E2D88 /* ViewController.swift */,
@@ -94,6 +95,13 @@
 				ADE587F122CB513D007F0F9A /* B.wav */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		CEA1E2D32AF6B07100334ECA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
