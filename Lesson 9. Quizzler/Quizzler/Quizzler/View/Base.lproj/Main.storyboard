@@ -28,19 +28,19 @@
                                 <rect key="frame" x="16" y="48" width="382" height="814"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7a-L0-QDA">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="70.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Qestion Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqo-fH-zOc" userLabel="Question Text">
-                                        <rect key="frame" x="0.0" y="80.5" width="382" height="533.5"/>
+                                        <rect key="frame" x="0.0" y="63" width="382" height="461"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-9c-pF2" userLabel="True Button">
-                                        <rect key="frame" x="0.0" y="624" width="382" height="80"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-9c-pF2" userLabel="Choise 1">
+                                        <rect key="frame" x="0.0" y="534" width="382" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="MwQ-R9-sgV"/>
@@ -48,14 +48,30 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" red="0.50012116073765178" green="0.59283248841784375" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="True" backgroundImage="Rectangle">
+                                        <state key="normal" title="Choice 1" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLD-F0-giG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5g-go-Njk">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOg-jn-8d4" userLabel="Choice 2">
+                                        <rect key="frame" x="0.0" y="624" width="382" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="MFk-MS-sZd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" red="0.50012116070000001" green="0.59283248840000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Choice 2" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enc-yL-urj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5g-go-Njk" userLabel="Choise 3">
                                         <rect key="frame" x="0.0" y="714" width="382" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -64,7 +80,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" red="0.50012116070000001" green="0.59283248840000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="False">
+                                        <state key="normal" title="Choice 3">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <imageReference key="backgroundImage" image="Rectangle" symbolScale="default" variableValue="0.60000000000000009"/>
                                         </state>
@@ -87,12 +103,14 @@
                                     <constraint firstAttribute="trailing" secondItem="OEc-9c-pF2" secondAttribute="trailing" id="N3z-EK-nkz"/>
                                     <constraint firstItem="R7a-L0-QDA" firstAttribute="leading" secondItem="yml-mp-uLI" secondAttribute="leading" id="OWX-mC-jvb"/>
                                     <constraint firstItem="rXu-DE-3XU" firstAttribute="leading" secondItem="yml-mp-uLI" secondAttribute="leading" id="POp-an-hbb"/>
+                                    <constraint firstItem="NOg-jn-8d4" firstAttribute="leading" secondItem="yml-mp-uLI" secondAttribute="leading" id="Pk8-EY-5Kg"/>
                                     <constraint firstItem="OEc-9c-pF2" firstAttribute="leading" secondItem="yml-mp-uLI" secondAttribute="leading" id="Tfu-RM-RF1"/>
                                     <constraint firstItem="Oqo-fH-zOc" firstAttribute="leading" secondItem="yml-mp-uLI" secondAttribute="leading" id="Yqe-9e-cak"/>
                                     <constraint firstAttribute="trailing" secondItem="R7a-L0-QDA" secondAttribute="trailing" id="dGf-nD-u4g"/>
                                     <constraint firstAttribute="trailing" secondItem="m5g-go-Njk" secondAttribute="trailing" id="eeL-kO-Ur5"/>
                                     <constraint firstAttribute="trailing" secondItem="Oqo-fH-zOc" secondAttribute="trailing" id="lJa-GV-lUp"/>
                                     <constraint firstItem="m5g-go-Njk" firstAttribute="leading" secondItem="yml-mp-uLI" secondAttribute="leading" id="vE1-jB-xHT"/>
+                                    <constraint firstAttribute="trailing" secondItem="NOg-jn-8d4" secondAttribute="trailing" id="wwX-hl-G22"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -109,11 +127,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="falseButton" destination="m5g-go-Njk" id="gb3-j3-9iX"/>
+                        <outlet property="choiceOneButton" destination="OEc-9c-pF2" id="4LT-2O-F2K"/>
+                        <outlet property="choiceThreeButton" destination="m5g-go-Njk" id="gb3-j3-9iX"/>
+                        <outlet property="choiceTwoButton" destination="NOg-jn-8d4" id="43d-zE-FAg"/>
                         <outlet property="progressBar" destination="rXu-DE-3XU" id="uLK-fU-w6V"/>
                         <outlet property="questionLabel" destination="Oqo-fH-zOc" id="9Q7-Y5-fPO"/>
                         <outlet property="scoreLabel" destination="R7a-L0-QDA" id="sHJ-lp-ZIi"/>
-                        <outlet property="trueButton" destination="OEc-9c-pF2" id="4LT-2O-F2K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
