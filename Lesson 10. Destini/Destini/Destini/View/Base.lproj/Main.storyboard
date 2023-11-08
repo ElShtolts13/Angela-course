@@ -29,32 +29,32 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7q-fD-28C" userLabel="Choise1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="u7q-fD-28C" userLabel="Choice1">
                                         <rect key="frame" x="0.0" y="511" width="343" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="sU5-v1-Gzd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Choise1" backgroundImage="choice1Background">
+                                        <state key="normal" title="Choice1" backgroundImage="choice1Background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="choiseMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XdI-Ge-x9K"/>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ono-5i-Gg4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLw-4c-cul" userLabel="Choise2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YLw-4c-cul" userLabel="Choice2">
                                         <rect key="frame" x="0.0" y="631" width="343" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="bTi-Bn-4JQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Choise2" backgroundImage="choice2Background">
+                                        <state key="normal" title="Choice2" backgroundImage="choice2Background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="choiseMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n6n-dk-8Rt"/>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdw-dn-MfV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -79,14 +79,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="choise1Button" destination="u7q-fD-28C" id="QUz-aE-8dL"/>
-                        <outlet property="choise2Button" destination="YLw-4c-cul" id="rXt-Wo-cPF"/>
+                        <outlet property="choice1Button" destination="u7q-fD-28C" id="8F8-O0-Pdi"/>
+                        <outlet property="choice2Button" destination="YLw-4c-cul" id="xqq-ye-Hck"/>
                         <outlet property="storyLabel" destination="pee-mP-fOg" id="MKQ-or-7j3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="-34"/>
+            <point key="canvasLocation" x="24.800000000000001" y="-34.729064039408868"/>
         </scene>
     </scenes>
     <resources>

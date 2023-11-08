@@ -10,8 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var storyLabel: UILabel!
-    @IBOutlet weak var choise1Button: UIButton!
-    @IBOutlet weak var choise2Button: UIButton!
+    @IBOutlet weak var choice1Button: UIButton!
+    @IBOutlet weak var choice2Button: UIButton!
     var storyBrain = StoryBrain()
     
    
@@ -23,26 +23,18 @@ class ViewController: UIViewController {
         
     }
 
-    @IBAction func choiseMade(_ sender: UIButton) {
-        
-        if sender.currentTitle == storyBrain.chooseChoise1() {
-            storyBrain.storyNumber += 1
-            updateUI()
-        } else if sender.currentTitle == storyBrain.chooseChoise2(){
-            storyBrain.storyNumber += 2
-            updateUI()
-        } else {
-            storyBrain.storyNumber = 0
-            updateUI()
+    @IBAction func choiceMade(_ sender: UIButton) {
+        storyBrain.nextStory(userChoice: sender.currentTitle!)
+        updateUI()
         }
-    }
+    
 
     func updateUI() {
-        storyLabel.text = storyBrain.chooseStory()
-        choise1Button.setTitle(storyBrain.chooseChoise1(), for: .normal)
-        choise2Button.setTitle(storyBrain.chooseChoise2(), for: .normal)
+
+        storyLabel.text = storyBrain.getStory()
+        choice1Button.setTitle(storyBrain.getChoice1(), for: .normal)
+        choice2Button.setTitle(storyBrain.getChoice2(), for: .normal)
         
     }
-    }
-
+}
 
