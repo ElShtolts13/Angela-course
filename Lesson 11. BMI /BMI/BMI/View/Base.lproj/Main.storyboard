@@ -150,7 +150,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="KFo-li-V9U">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.4823529411764706" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TV5-oV-xZS">
                                 <rect key="frame" x="83.5" y="333.5" width="247.5" height="171"/>
@@ -194,7 +193,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sNy-pd-Cq6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.4823529411764706" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TV5-oV-xZS" firstAttribute="centerX" secondItem="yKj-3A-eYh" secondAttribute="centerX" id="39g-Fk-ZcT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v9H-en-W0m" secondAttribute="trailing" id="5YD-wC-814"/>
