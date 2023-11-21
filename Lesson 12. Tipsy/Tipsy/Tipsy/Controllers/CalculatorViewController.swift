@@ -10,6 +10,7 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
+ 
     @IBOutlet weak var billTextField: UITextField!
     
     @IBOutlet weak var zeroPcButton: UIButton!
@@ -64,12 +65,14 @@ class CalculatorViewController: UIViewController {
         } else {
             billTextField.text = "Error"
         }
+        performSegue(withIdentifier: "calculate", sender: self)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "calculate" {
             let destinationVC = segue.destination as! ResultsViewController
-            destinationVC.totalLabel.text = finalBillTotal
-            destinationVC.settingLabel.text = "Split between \(peopleCount), with \(Int(pSctValue * 100.0)) tip"
+            destinationVC.calculateResult = finalBillTotal
+            destinationVC.settingText = "Split between \(peopleCount), with \(Int(pSctValue * 100.0)) tip"
         }
         
     }
