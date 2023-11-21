@@ -18,10 +18,12 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var splitNumberLabel: UILabel!
     var peopleCount = 2
     var pSctValue = 0.1
-    var billTotal = 0.0
+    var finalBillTotal = "0.0"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         billTextField.isUserInteractionEnabled = true
         billTextField.becomeFirstResponder()
         billTextField.keyboardType = .numberPad
@@ -30,7 +32,7 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func tipChanged(_ sender: UIButton) {
         
-    
+        billTextField.endEditing(true)
         
         zeroPcButton.isSelected = false
         tenPctButton.isSelected = false
@@ -54,14 +56,16 @@ class CalculatorViewController: UIViewController {
         } else if  twentyPctButton.isSelected {
             pSctValue = 0.2
         }
-        print(peopleCount)
-       // billTotal = Double(billTextField.text ?? 0.0)
-        
-        
-        print(billTotal)
-//        if let userValue1 = userValue {
-//            cost = Double(userValue1) * pSctValue / Double(peopleCount))
+
+        if let billText = billTextField.text, let billAmount = Double(billText) {
+            let billTotal = (billAmount + (billAmount * pSctValue))/Double(peopleCount)
+            finalBillTotal = String(format: "%.2f", billTotal)
+            print(finalBillTotal)
+         } else {
+            billTextField.text = "Error"
         }
+        
+    }
         
     }
     
