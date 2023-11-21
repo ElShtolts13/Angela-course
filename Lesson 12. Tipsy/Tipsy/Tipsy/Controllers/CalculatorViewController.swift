@@ -9,7 +9,7 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
-
+    
     @IBOutlet weak var billTextField: UITextField!
     
     @IBOutlet weak var zeroPcButton: UIButton!
@@ -28,7 +28,7 @@ class CalculatorViewController: UIViewController {
         billTextField.becomeFirstResponder()
         billTextField.keyboardType = .numberPad
     }
-   
+    
     
     @IBAction func tipChanged(_ sender: UIButton) {
         
@@ -39,11 +39,11 @@ class CalculatorViewController: UIViewController {
         twentyPctButton.isSelected = false
         
         sender.isSelected = true
-
+        
     }
     
     @IBAction func stepperValueChange(_ sender: UIStepper) {
-       
+        
         peopleCount = Int(sender.value)
         splitNumberLabel.text = String(peopleCount)
     }
@@ -56,18 +56,23 @@ class CalculatorViewController: UIViewController {
         } else if  twentyPctButton.isSelected {
             pSctValue = 0.2
         }
-
+        
         if let billText = billTextField.text, let billAmount = Double(billText) {
             let billTotal = (billAmount + (billAmount * pSctValue))/Double(peopleCount)
             finalBillTotal = String(format: "%.2f", billTotal)
             print(finalBillTotal)
-         } else {
+        } else {
             billTextField.text = "Error"
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "calculate" {
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.totalLabel.text = finalBillTotal
+            destinationVC.settingLabel.text = "Split between \(peopleCount), with \(Int(pSctValue * 100.0)) tip"
         }
         
     }
-        
-    }
-    
+}
 
 
