@@ -10,6 +10,7 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
+ 
     @IBOutlet weak var billTextField: UITextField!
     
     @IBOutlet weak var zeroPcButton: UIButton!
@@ -66,8 +67,8 @@ class CalculatorViewController: UIViewController {
         } else {
             billTextField.text = "Error"
         }
-        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultsViewController
