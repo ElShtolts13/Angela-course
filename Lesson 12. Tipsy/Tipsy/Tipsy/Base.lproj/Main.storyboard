@@ -203,7 +203,7 @@
                         <outlet property="tenPctButton" destination="7y6-Kf-yF0" id="uwO-x5-7Pj"/>
                         <outlet property="twentyPctButton" destination="UtR-dU-EKt" id="sct-L2-9eC"/>
                         <outlet property="zeroPcButton" destination="XzR-0E-Xf7" id="X8U-QR-6yT"/>
-                        <segue destination="Dnf-m2-FPm" kind="modal" identifier="calculate" id="hHt-dt-38f"/>
+                        <segue destination="Dnf-m2-FPm" kind="presentation" identifier="goToResult" id="DYS-Dx-yJd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -60,16 +60,19 @@ class CalculatorViewController: UIViewController {
         if let billText = billTextField.text, let billAmount = Double(billText) {
             let billTotal = (billAmount + (billAmount * pSctValue))/Double(peopleCount)
             finalBillTotal = String(format: "%.2f", billTotal)
-            print(finalBillTotal)
+            
+            self.performSegue(withIdentifier: "goToResult", sender: self)
+            
         } else {
             billTextField.text = "Error"
         }
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "calculate" {
+        if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultsViewController
-            destinationVC.totalLabel.text = finalBillTotal
-            destinationVC.settingLabel.text = "Split between \(peopleCount), with \(Int(pSctValue * 100.0)) tip"
+            destinationVC.calculateResult = finalBillTotal
+            destinationVC.settingText = "Split between \(peopleCount), with \(Int(pSctValue * 100.0)) tip"
         }
         
     }
