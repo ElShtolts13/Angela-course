@@ -8,7 +8,29 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    let coinManager = CoinManager()
+    
+    
+//выбираем количество стобиков
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+//    выбираем количество строчек
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return coinManager.currencyArray.count
+    }
+// добавили в строчки заголовки из массива
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return coinManager.currencyArray[row]
+    }
+// вызывается каждый раз, когда юзер крутит барабан и записывает результат
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedCurrency = coinManager.currencyArray[row]
+        coinManager.getCoinPrice(for: selectedCurrency)
+    }
+    
     
     let titleLabel: UILabel = {
         let label = UILabel()
@@ -53,6 +75,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currencyPicker.dataSource = self
+        currencyPicker.delegate = self
         addView()
         setUpUI()
     }
@@ -95,13 +120,11 @@ class ViewController: UIViewController {
             }
         currencyPicker.snp.makeConstraints{ make in
             make.height.equalTo(216)
-            make.bottom.leading.trailing.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().inset(15)
         }
             
         }
-        
-        
-        
     }
 
 
