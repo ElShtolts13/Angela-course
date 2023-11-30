@@ -8,8 +8,6 @@
 import Foundation
 struct CoinData: Codable {
     let rate: Double
-    
-    enum CodingKeys: String, CodingKey {
-            case rate
-        }
 }
+
+      

@@ -8,29 +8,11 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    let coinManager = CoinManager()
-    
-    
-//выбираем количество стобиков
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-//    выбираем количество строчек
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return coinManager.currencyArray.count
-    }
-// добавили в строчки заголовки из массива
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return coinManager.currencyArray[row]
-    }
-// вызывается каждый раз, когда юзер крутит барабан и записывает результат
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let selectedCurrency = coinManager.currencyArray[row]
-        coinManager.getCoinPrice(for: selectedCurrency)
-    }
-    
+class ViewController: UIViewController  {
+   
+    var coinManager = CoinManager()
+
+    //MARK: -  UIElements
     
     let titleLabel: UILabel = {
         let label = UILabel()
@@ -39,6 +21,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         label.font = .systemFont(ofSize: 50)
           return label
       }()
+    
     let coinView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
@@ -73,15 +56,19 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return picker
     }()
 
+    var coinManagerDelegate = CoinManager()
+    
+    //MARK: -  viewControllerLiveCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        coinManager.delegate = self
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
         addView()
         setUpUI()
     }
 
+    //MARK: -  addingViews
     func addView() {
         view.addSubview(titleLabel)
         view.addSubview(coinView)
@@ -90,7 +77,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         coinView.addSubview(bitcoinLabel)
         view.addSubview(currencyPicker)
     }
-
+//MARK: - setUpUI
     func setUpUI() {
         view.backgroundColor = UIColor(red: 32/255, green: 113/255, blue: 106/255, alpha: 1)
         
@@ -126,5 +113,39 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             
         }
     }
-
-
+//MARK: - CoinManagerDelegate
+extension ViewController: CoinManagerDelegate {
+    func didFailWithError(error: Error) {
+        print("error")
+    }
+    
+    func didUpdateCoin(_ coinManager: CoinManager, coin: CoinData){
+        DispatchQueue.main.async {
+            self.bitcoinLabel.text = String(format: "%.2f",coin.rate)
+        }
+    }
+}
+//MARK: - UIPickerViewDataSource, UIPickerViewDelegate
+extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+//выбираем количество стобиков
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+//    выбираем количество строчек
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return coinManager.currencyArray.count
+    }
+// добавили в строчки заголовки из массива
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return coinManager.currencyArray[row]
+    }
+// вызывается каждый раз, когда юзер крутит барабан и записывает результат
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedCurrency = coinManager.currencyArray[row]
+        self.coinManager.getCoinPrice(for: selectedCurrency)
+        self.currencyLabel.text = selectedCurrency
+        
+    }
+}
